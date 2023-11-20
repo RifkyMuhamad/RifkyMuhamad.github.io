@@ -1,23 +1,22 @@
-import { useState } from 'react'
-import Typewriter from "typewriter-effect";
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Profile from './profile/Profile';
+import Article from './article/Article';
+import Project from './projects/Project';
+import Contact from './contact/Contact';
 
 function App() {
-  
-  // eslint-disable-next-line no-unused-vars
-  const [titles, setTitles] = useState(["Rifky Muhamad..", "Dyone-Strankers.", "ディオン・ストランカース", "디온 수토랑쿠","Wanna be Generalist.", "Wanna be Expert.", "Love Language!", "Full Time Learner!", "*(3rNd&#0R3IM(_)@$"]);
 
   return (
-    <>
-      <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  delay: 40,
-                  strings: titles,
-                }}
-              />
-    </>
+    <BrowserRouter>
+      <div className='m-0 p-0 h-[2000px]'>
+      <Routes>
+        <Route path='/' element={<Profile/>}/>
+        <Route path='/article' element={<Article/>}/>
+        <Route path='/project' element={<Project/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+      </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
