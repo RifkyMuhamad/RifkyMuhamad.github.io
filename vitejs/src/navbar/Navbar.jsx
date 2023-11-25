@@ -5,30 +5,43 @@ import Logo from "./components/Logo";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="flex fixed bg-opacity-50 justify-between top-0 right-0 left-0 m-0 z-[9999] items-center px-[5rem] py-[1%] bg-white">
-        <Logo/>
-        <div className="bg-slate-300 w-1/2">
-          <ul className="flex justify-between">
-            <li>
-              <Link to={"https://rifkymuhamad.github.io/article"}>Article</Link>
+    <header className="box-border container">
+      <nav className="m-0 items-center justify-between flex bg-opacity-10 top-0 bg-white right-0 left-0 z-[9999] fixed px-[2em] py-[1%]">
+        <div className="xsm:w-1/2 lg: w-1/6 flex">
+          <Logo />
+        </div>
+        <div className="text-white">
+          <h1 className="xsm:block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">XSM</h1>
+          <h1 className="xsm:hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">SM</h1>
+          <h1 className="xsm:hidden sm:hidden md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden">MD</h1>
+          <h1 className="xsm:hidden sm:hidden md:hidden lg:block xl:hidden 2xl:hidden 3xl:hidden">LG</h1>
+          <h1 className="xsm:hidden sm:hidden md:hidden lg:hidden xl:block 2xl:hidden 3xl:hidden">XL</h1>
+          <h1 className="xsm:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:block 3xl:hidden">2XL</h1>
+          <h1 className="xsm:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:block">3XL</h1>
+        </div>
+        <div className="bg-slate-900">
+          <ul className="justify-center flex gap-3">
+            <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
+              <Link to={"http://localhost:5173/article"}>Article</Link>
             </li>
-            <li>
-              <Link to={"https://rifkymuhamad.github.io/project"}>Project</Link>
+            <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
+              <Link to={"http://localhost:5173/project"}>Project</Link>
             </li>
-            <li>
-              <Link to={"https://rifkymuhamad.github.io/contact"}>Contact</Link>
+            <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
+              <Link to={"http://localhost:5173/contact"}>Contact</Link>
             </li>
-            <li>
-              <Search/>
+            <li className="xsm:hidden sm:block md:block lg:block 2xl:block">
+              <Search />
             </li>
-            <li>
-              <a href="#"><IoIosMenu /></a>
+            <li className="xsm: sm:block md:hidden lg:hidden 2xl:hidden">
+              <a href="#">
+                <IoIosMenu />
+              </a>
             </li>
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

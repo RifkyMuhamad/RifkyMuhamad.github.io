@@ -5,10 +5,10 @@ const Search = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="flex bg-stone-200 justify-around w-1/10">
+    <div className="flex bg-stone-200 justify-around">
       <IoIosSearch className="w-6 h-6"/>
       <input
-        className="border-none focus:outline-none"
+        className="border-none focus:outline-none bg-slate-700"
         placeholder="Search..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
