@@ -22,13 +22,13 @@ const Navbar = () => {
         <div className="bg-slate-900">
           <ul className="justify-center flex gap-3">
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"http://localhost:5173/article"}>Article</Link>
+              <Link to={"https://rifkymuhamad.github.io/article"}>Article</Link>
             </li>
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"http://localhost:5173/project"}>Project</Link>
+              <Link to={"https://rifkymuhamad.github.io/project"}>Project</Link>
             </li>
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"http://localhost:5173/contact"}>Contact</Link>
+              <Link to={"https://rifkymuhamad.github.io/contact"}>Contact</Link>
             </li>
             <li className="xsm:hidden sm:block md:block lg:block 2xl:block">
               <Search />

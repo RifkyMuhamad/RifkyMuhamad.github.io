@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Logo = () => {
   return (
     <h4 className="bg-slate-800">
-      <Link to={"http://localhost:5173/"} className="bg-lime-900">
+      <Link to={"https://rifkymuhamad.github.io/"} className="bg-lime-900">
         Dyone <span>Strankers</span>.
       </Link>
     </h4>
