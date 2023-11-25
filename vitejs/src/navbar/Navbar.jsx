@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Search from "./components/Search";
 import { IoIosMenu } from "react-icons/io";
 import Logo from "./components/Logo";
+import { myURL } from "../url/Url";
 
 const Navbar = () => {
   return (
@@ -22,13 +23,13 @@ const Navbar = () => {
         <div className="bg-slate-900">
           <ul className="justify-center flex gap-3">
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"https://rifkymuhamad.github.io/article"}>Article</Link>
+              <Link to={`${myURL}/article`}>Article</Link>
             </li>
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"https://rifkymuhamad.github.io/project"}>Project</Link>
+              <Link to={`${myURL}/project`}>Project</Link>
             </li>
             <li className="xsm:hidden sm:hidden md:block lg:block 2xl:block">
-              <Link to={"https://rifkymuhamad.github.io/contact"}>Contact</Link>
+              <Link to={`${myURL}//contact`}>Contact</Link>
             </li>
             <li className="xsm:hidden sm:block md:block lg:block 2xl:block">
               <Search />

@@ -1,0 +1,1 @@
+export const myURL = "https://rifkymuhamad.github.io";
