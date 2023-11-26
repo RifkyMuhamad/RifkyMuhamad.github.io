@@ -21,10 +21,23 @@ const Profile = () => {
     <div className="flex items-center justify-center min-h-screen">
       <div>
         <div
-          className="xsm:bg-[-55em] sm:bg-[-55em] md:bg-[-45em] lg:bg-[-35em] xl:bg-[-25em] 2xl:bg-[-20em] 3xl:bg-[0em] 3xl:bg-cover w-full h-screen absolute top-0 left-0 bg-no-repeat"
+          className="
+          xsm:bg-[-55em]
+          sm:bg-[-55em]
+          md:bg-[-45em]
+          lg:bg-[-50rem] 
+          xl:bg-[-120em]
+          2xl:bg-[0em]
+          3xl:bg-[0em]
+          
+          bg-cover w-full h-screen absolute top-0 left-0 bg-no-repeat"
           style={{ backgroundImage: "url(" + bgImg + ")" }}
         ></div>
-        <div className="bg-slate-900 bg-opacity-50 xsm:pl-[3em] xsm:top-[10em] inset-x-0 fixed">
+        <div
+          className="
+        xsm:pl-[3em] xsm:top-[10em]
+        inset-x-0 fixed bg-slate-900 bg-opacity-50 "
+        >
           <main className="">
             <h1 className="font-pixels">{title}</h1>
             <h1 className="font-zilla">
