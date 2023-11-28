@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-        <p>Ini Contact</p>
+        <p className="container mx-auto">Ini Contact</p>
     </>
   )
 }

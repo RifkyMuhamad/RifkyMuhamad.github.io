@@ -1,4 +1,4 @@
-import bgImg from "../assets/rocket.jpg";
+// import bgImg from "../assets/rocket.jpg";
 import Typewriter from "typewriter-effect";
 import { useState } from "react";
 
@@ -20,19 +20,19 @@ const Profile = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div>
-        <div
+        {/* <div
           className="
-          xsm:bg-[-55em]
-          sm:bg-[-55em]
+          xsm:bg-[-35em]
+          sm:bg-[-30em]
           md:bg-[-45em]
-          lg:bg-[-50rem] 
-          xl:bg-[-120em]
+          lg:bg-[0rem] 
+          xl:bg-[-5em]
           2xl:bg-[0em]
           3xl:bg-[0em]
           
           bg-cover w-full h-screen absolute top-0 left-0 bg-no-repeat"
           style={{ backgroundImage: "url(" + bgImg + ")" }}
-        ></div>
+        ></div> */}
         <div
           className="
         xsm:pl-[3em] xsm:top-[10em]

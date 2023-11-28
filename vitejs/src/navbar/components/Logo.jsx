@@ -3,11 +3,8 @@ import { myURL } from "../../url/Url";
 
 const Logo = () => {
   return (
-    <h4 className="
-    lg:text-[2.5rem]
-
-    bg-slate-800">
-      <Link to={`${myURL}/`} className="bg-lime-900">
+    <h4>
+      <Link to={`${myURL}/`} className="font-bold text-2xl">
         Dyone <span>Strankers</span>.
       </Link>
     </h4>
