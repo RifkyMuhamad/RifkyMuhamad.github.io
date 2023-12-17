@@ -10,7 +10,9 @@ export default {
         'rocket': "url(./src/assets/rocket.jpg)",
       },
       colors: {
-        'navbar': '##3A313E',
+        'navbar': '#3A313E',
+        'dark-purple': '#081A51',
+        'white-light': 'rgba(255,255,255,0.17)',
       },
     },
     fontFamily: {

@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className="m-0 p-0 h-[2000px] box-border scroll-smooth bg-white">
+      <main className="mt-[2.19rem] p-0 h-[2000px] box-border scroll-smooth bg-zinc-600">
         <Routes>
           <Route path="/" element={<Profile />} />
           <Route path="/article" element={<Article />} />

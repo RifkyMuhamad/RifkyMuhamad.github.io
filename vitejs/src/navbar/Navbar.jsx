@@ -2,6 +2,7 @@ import Logo from "./components/Logo";
 import ListNavbar from "./components/ListNavbar";
 import MediaQuery from "./components/MediaQuery";
 import SearchAndHamburger from "./components/SearchAndHamburger";
+// import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   return (
@@ -16,6 +17,15 @@ const Navbar = () => {
             bg-opacity-50 bg-slate-500
             z-[9999]"
         >
+          
+          {/* <div >
+            <IoMdMenu 
+             className="
+              w-[1.7rem] h-[1.7rem]
+              pointer
+             "/>
+          </div> */}
+
           <div className="flex">
             <Logo />
           </div>

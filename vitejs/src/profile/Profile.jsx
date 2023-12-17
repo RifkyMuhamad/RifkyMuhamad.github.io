@@ -18,40 +18,21 @@ const Profile = () => {
   const title = "Welcome Traveler!";
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div>
-        {/* <div
-          className="
-          xsm:bg-[-35em]
-          sm:bg-[-30em]
-          md:bg-[-45em]
-          lg:bg-[0rem] 
-          xl:bg-[-5em]
-          2xl:bg-[0em]
-          3xl:bg-[0em]
-          
-          bg-cover w-full h-screen absolute top-0 left-0 bg-no-repeat"
-          style={{ backgroundImage: "url(" + bgImg + ")" }}
-        ></div> */}
-        <div
-          className="
-        xsm:pl-[3em] xsm:top-[10em]
-        inset-x-0 fixed bg-slate-900 bg-opacity-50 "
-        >
-          <main className="">
-            <h1 className="font-pixels">{title}</h1>
-            <h1 className="font-zilla">
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  delay: 40,
-                  strings: titles,
-                }}
-              />
-            </h1>
-          </main>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-lime-500">
+      <div className="xsm:pl-[3em] xsm:top-[10em] inset-x-0 fixed">
+        <main className="">
+          <h1 className="font-pixels">{title}</h1>
+          <h1 className="font-zilla">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 40,
+                strings: titles,
+              }}
+            />
+          </h1>
+        </main>
       </div>
     </div>
   );
