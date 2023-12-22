@@ -1,8 +1,26 @@
-// import bgImg from "../assets/rocket.jpg";
-import Typewriter from "typewriter-effect";
-import { useState } from "react";
+  import Typewriter from "typewriter-effect";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Profile = () => {
+
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const apiUrl = "https://dyonestrankers-nodejs-api.vercel.app/";
+        const response = await axios.get(apiUrl);
+        const messageValue = response.data.message;
+        setData(messageValue);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   // eslint-disable-next-line no-unused-vars
   const [titles, setTitles] = useState([
     "Rifky Muhamad..",
@@ -13,16 +31,26 @@ const Profile = () => {
     "Wanna be Expert.",
     "Love Language!",
     "Full Time Learner!",
-    "*(3rNd&#0R3IM(_)@$",
   ]);
+
   const title = "Welcome Traveler!";
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-lime-500">
-      <div className="xsm:pl-[3em] xsm:top-[10em] inset-x-0 fixed">
+    <div className="">
+      <div className="">
         <main className="">
-          <h1 className="font-pixels">{title}</h1>
-          <h1 className="font-zilla">
+          <h1 className="">{title}</h1>
+          <div>
+            {data ? (
+                <div>
+                  <pre>{data}</pre>
+                </div>
+            ) : (
+              <p> Loading...</p>
+            )}
+            {error && <p>Error: {error.message}</p>}
+          </div>
+          <h1 className="">
             <Typewriter
               options={{
                 autoStart: true,
@@ -39,19 +67,3 @@ const Profile = () => {
 };
 
 export default Profile;
-// <h1 className=" font-zilla px-[1em] py-[0.5em] text-[3rem]">
-//   <Typewriter
-//     options={{
-//       autoStart: true,
-//       loop: true,
-//       delay: 40,
-//       strings: titles,
-//     }}
-//     />
-// </h1>
-{
-  /* <h1 className=" text-[3rem] font-pixels px-[1em] py-[0.5em]">{title}</h1> */
-}
-
-// <div className="absolute inset-0 flex items-center justify-start px-[15%]">
-// <main className="px-[1em] py-[0.5em]">

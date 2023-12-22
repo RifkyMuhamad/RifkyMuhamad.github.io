@@ -4,7 +4,7 @@ import { myURL } from "../../url/Url";
 const Logo = () => {
   return (
     <h4>
-      <Link to={`${myURL}/`} className="font-bold text-2xl">
+      <Link to={`${myURL}/`} className="">
         Dyone <span>Strankers</span>.
       </Link>
     </h4>
@@ -12,13 +12,3 @@ const Logo = () => {
 };
 
 export default Logo;
-
-{
-  /* <div className="mx-auto bg-slate-700">
-  <h4 className="bg-slate-800 flex px-[3em] font-pixels text-[1.3rem] sm:html-font">
-    <Link to={"http://localhost:5173/"} className="bg-lime-900">
-      Dyone <span>Strankers</span>.
-    </Link>
-  </h4>
-</div>; */
-}
