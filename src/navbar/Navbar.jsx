@@ -1,7 +1,21 @@
+import ListNavbar from "./components/ListNavbar";
+import Logo from "./components/Logo";
+
 const Navbar = () => {
   return (
     <div>
-        Ini Navbar
+      <header>
+        <nav>
+
+          <div>
+            <Logo />
+          </div>
+
+          <div>
+            <ListNavbar />
+          </div>
+        </nav>
+      </header>
     </div>
   );
 };
