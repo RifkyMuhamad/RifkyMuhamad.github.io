@@ -2,7 +2,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import Profile from "./profile/Profile";
 import Article from "./article/Article";
-import Project from "./projects/Project";
 import Contact from "./contact/Contact";
 
 function App() {
@@ -19,3 +18,5 @@ function App() {
     </HashRouter>
   );
 }
+
+export default App;
