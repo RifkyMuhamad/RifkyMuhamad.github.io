@@ -3,11 +3,13 @@ import { myURL } from "../../url/Url";
 
 const Logo = () => {
   return (
-    <h4>
-      <Link to={`${myURL}/`} className="">
-        Dyone <span>Strankers</span>.
-      </Link>
-    </h4>
+    <div className="dyone-logo">
+      <h4>
+        <Link to={`${myURL}`} className="">
+          Dyone <span>Strankers</span>.
+        </Link>
+      </h4>
+    </div>
   );
 };
 

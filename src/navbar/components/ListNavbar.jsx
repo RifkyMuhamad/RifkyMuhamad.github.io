@@ -1,20 +1,26 @@
-import { Link } from "react-router-dom"
-import { myURL } from "../../url/Url"
+import { Link } from "react-router-dom";
+import { myURL } from "../../url/Url";
 
 const ListNavbar = () => {
   return (
-    <ul>
-      <li>
-        <Link to={`${myURL}/article`}>Article</Link>
-      </li>
-      <li>
-        <Link to={`${myURL}/project`}>Project</Link>
-      </li>
-      <li>
-        <Link to={`${myURL}/contact`}>Contact</Link>
-      </li>
-    </ul>
-  )
-}
+    <div className="list-nav">
+      <ul>
+        {/* Article use Svelte */}
+        <li>
+          <Link to={`https://rifkymuhamad.github.io/article`}>Article</Link>
+        </li>
 
-export default ListNavbar
+        {/* Project use Vue */}
+        <li>
+          <Link to={`https://rifkymuhamad.github.io/project`}>Project</Link>
+        </li>
+        
+        <li>
+          <Link to={`${myURL}/contact`}>Contact</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default ListNavbar;

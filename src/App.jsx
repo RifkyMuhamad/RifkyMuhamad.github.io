@@ -1,7 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import Profile from "./profile/Profile";
-import Article from "./article/Article";
 import Contact from "./contact/Contact";
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
       <main className="">
         <Routes>
           <Route path="/" element={<Profile />} />
-          <Route path="/article" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
