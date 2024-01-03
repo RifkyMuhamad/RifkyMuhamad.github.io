@@ -5,16 +5,12 @@ const ListNavbar = () => {
   return (
     <div className="list-nav">
       <ul>
-        {/* Article use Svelte */}
         <li>
-          <Link to={`https://rifkymuhamad.github.io/article`}>Article</Link>
+          <a href="https://rifkymuhamad.github.io/article">Article</a>
         </li>
-
-        {/* Project use Vue */}
         <li>
-          <Link to={`https://rifkymuhamad.github.io/project`}>Project</Link>
+          <a href="https://rifkymuhamad.github.io/project">Project</a>
         </li>
-        
         <li>
           <Link to={`${myURL}/contact`}>Contact</Link>
         </li>
