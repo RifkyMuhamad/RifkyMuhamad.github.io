@@ -1,36 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { nodeURL } from "../config/Url";
 import Typewriter from "typewriter-effect";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
 import "../styles/Profile.css";
+import axios from "axios";
 
 const Profile = () => {
   // eslint-disable-next-line no-unused-vars
-  const [titles, setTitles] = useState([
-    "Vite + React",
-    "Rifky Muhamad..",
-    "Dyone-Strankers.",
-    "ディオン・ストランカース",
-    "디온 수토랑쿠",
-    "Wanna be Generalist.",
-    "Wanna be Expert.",
-    "Love Language!",
-    "Full Time Learner!",
-  ]);
+  const [titles, setTitles] = useState();
+  const [data, setData] = useState(null);
 
-  const [count, setCount] = useState(0);
+  useEffect(() => {
+    axios
+      .get(nodeURL)
+      .then((response) => {
+        setData(response.data);
+        setTitles(response.data.id);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setTitles(["loading"]);
+      });
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
       <h1 className="">
         <Typewriter
           options={{
@@ -41,18 +34,6 @@ const Profile = () => {
           }}
         />
       </h1>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 };
