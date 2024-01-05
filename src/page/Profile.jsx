@@ -6,8 +6,8 @@ import axios from "axios";
 
 const Profile = () => {
   // eslint-disable-next-line no-unused-vars
-  const [titles, setTitles] = useState();
   const [data, setData] = useState(null);
+  const [titles, setTitles] = useState();
 
   useEffect(() => {
     axios
@@ -21,8 +21,6 @@ const Profile = () => {
         setTitles(["loading"]);
       });
   }, []);
-
-  console.log(nodeURL);
 
   return (
     <>
