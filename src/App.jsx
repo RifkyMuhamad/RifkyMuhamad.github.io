@@ -1,11 +1,11 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import Profile from "./profile/Profile";
 import Contact from "./contact/Contact";
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Navbar />
       <main className="">
         <Routes>
@@ -13,7 +13,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-    </HashRouter>
+    </Router>
   );
 }
 
