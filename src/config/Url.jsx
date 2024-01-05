@@ -1,8 +1,5 @@
-// import dotenv from "dotenv";
-
-// dotenv.config();
-
 const mainURL = import.meta.env.VITE_MAIN_URL;
-const nodeURL = import.meta.env.VITE_NODEJS;
+const profileTitlesURL = import.meta.env.VITE_PROFILE_TITLES_URL;
+const navItemsURL = import.meta.env.VITE_NAV_ITEMS_URL;
 
-export { mainURL, nodeURL };
+export { mainURL, profileTitlesURL, navItemsURL };
