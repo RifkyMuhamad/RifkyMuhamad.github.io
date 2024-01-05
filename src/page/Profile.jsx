@@ -22,6 +22,8 @@ const Profile = () => {
       });
   }, []);
 
+  console.log(nodeURL);
+
   return (
     <>
       <h1 className="">
