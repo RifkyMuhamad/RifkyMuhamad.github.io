@@ -14,8 +14,8 @@ const Profile = () => {
     axios
       .get(profileTitlesURL)
       .then((response) => {
-        // setTitles(response.data.id);
-        setTitles(["Wanna be Generalist"]);
+        setTitles(response.data.id);
+        // setTitles(["Wanna be Generalist"]);
       })
       .catch((error) => {
         console.error("Error:", error);
