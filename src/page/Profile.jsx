@@ -28,8 +28,8 @@ const Profile = () => {
 
 
 
-      {/* <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 xsm:bg-red-500 sm:bg-slate-500 md:bg-lime-500 lg:bg-sky-500 xl:bg-fuchsia-500 w-full h-screen gap-4"> */}
-      <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 w-full h-screen gap-4">
+      {/* <div className="flex flex-col-reverse sm:grid sm:grid-cols-2  w-full h-[75vh] xsm2:h-[85vh] xsm3:h-[95vh] lg:h-screen gap-4 xsm:bg-red-500 xsm2:bg-yellow-400 xsm3:bg-emerald-500 sm:bg-slate-500 md:bg-lime-500 lg:bg-sky-500 xl:bg-fuchsia-500"> */}
+      <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 w-full h-[75vh] xsm2:h-[85vh] xsm3:h-[95vh] lg:h-screen gap-4">
 
 
         <div className="justify-center items-center flex">
@@ -46,7 +46,7 @@ const Profile = () => {
         </div>
 
 
-        <Carousel indicators={false} className="">
+        <Carousel indicators={false} className="mt-[3rem] sm:mt-0">
           <img
             src={banner1}
             alt=""

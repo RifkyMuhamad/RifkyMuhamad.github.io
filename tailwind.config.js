@@ -18,6 +18,8 @@ export default {
     },
     screens: {
       xsm: "100px",
+      xsm2: "440px",
+      xsm3: "520px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
