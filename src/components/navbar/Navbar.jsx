@@ -38,12 +38,14 @@ const Navbar = () => {
     };
   }, []);
 
+  console.log(itemsNav);
+
   return (
-    <header className="w-full bg-[#F58840] fixed top-0 left-0 right-0">
+    <header className="w-full bg-amber-400 fixed top-0 left-0 right-0">
       <nav
         className={`py-4 lg:px-14 px-4 ${
           isSticky
-            ? "sticky top-0 left-0 right-0 border-b bg-[#F58840] duration-300"
+            ? "sticky top-0 left-0 right-0 bg-amber-400 duration-300"
             : ""
         }`}
       >
@@ -52,7 +54,9 @@ const Navbar = () => {
             href={mainURL}
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <span className="text-[#263238]">DyoneStrankers</span>
+            <span className="text-[#263238]">
+              {itemsNav && (itemsNav.logo)}
+            </span>
           </a>
           {itemsNav && (
             <ul className="md:flex space-x-12 hidden">
@@ -72,10 +76,10 @@ const Navbar = () => {
               href="/"
               className="hidden lg:flex items-center text-gray900 hover:text-white"
             >
-              Login
+              {itemsNav && (itemsNav.signInAndSignUp.login)}
             </a>
             <button className="text-white bg-gray900 py-2 px-4 transition-all duration-300 rounded hover:bg-neutralGrey">
-              Sign Up
+              {itemsNav && (itemsNav.signInAndSignUp.logup)}
             </button>
           </div>
           <div className="md:hidden">
@@ -92,13 +96,13 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`space-y-4 px-4 mt-16 py-7 bg-[#F58840] ${
+          className={`space-y-4 px-4 mt-16 py-7 bg-amber-400 ${
             isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
           }`}
         >
           {itemsNav && (
             <div
-              className={`space-y-4 px-4 mt-16 py-7 bg-[#F58840] ${
+              className={`space-y-4 px-4 mt-16 py-7 bg-amber-400 ${
                 isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
               }`}
             >
