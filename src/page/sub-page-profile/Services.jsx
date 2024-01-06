@@ -38,12 +38,14 @@ const Services = () => {
     },
     {
       id: 5,
-      title: "RifkyMuhamad.github.io",
+      title: "RifkyMuhamad github io",
       description: "Personal Website untuk Web ini",
       image: "src/assets/rifkymuhamad_card.jpg",
       link: "https://github.com/RifkyMuhamad/RifkyMuhamad.github.io",
     },
   ];
+
+  console.log(respository[0].image);
 
   return (
     <div
