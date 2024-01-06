@@ -4,21 +4,26 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js',
+    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
       colors: {
-        'neutralSilver': '#F5F7FA',
-        'neutralDGrey': '#4D4D4D',
-        'brandPrimary': '#4CAF4F',
-        'neutralGrey': '#717171',
-        'gray900': '#18191F',
-      }
+        neutralSilver: "#F5F7FA",
+        neutralDGrey: "#4D4D4D",
+        brandPrimary: "#4CAF4F",
+        neutralGrey: "#717171",
+        gray900: "#18191F",
+      },
+    },
+    screens: {
+      xsm: "100px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
-  plugins: [
-    require('flowbite/plugin'),
-  ],
+  plugins: [require("flowbite/plugin")],
 };
-

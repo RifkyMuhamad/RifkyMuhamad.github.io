@@ -14,7 +14,8 @@ const Profile = () => {
     axios
       .get(profileTitlesURL)
       .then((response) => {
-        setTitles(response.data.id);
+        // setTitles(response.data.id);
+        setTitles(["Wanna be Generalist"]);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -24,9 +25,15 @@ const Profile = () => {
 
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen ">
-      <div className="grid w-full h-screen grid-cols-2 gap-4">
+
+
+
+      {/* <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 xsm:bg-red-500 sm:bg-slate-500 md:bg-lime-500 lg:bg-sky-500 xl:bg-fuchsia-500 w-full h-screen gap-4"> */}
+      <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 w-full h-screen gap-4">
+
+
         <div className="justify-center items-center flex">
-          <h1 className="text-4xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
+          <h1 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl bg-white font-semibold mb-4 text-neutralDGrey md:w-3/4">
             <Typewriter
               options={{
                 autoStart: true,
@@ -37,7 +44,9 @@ const Profile = () => {
             />
           </h1>
         </div>
-        <Carousel indicators={false}>
+
+
+        <Carousel indicators={false} className="">
           <img
             src={banner1}
             alt=""
@@ -51,7 +60,12 @@ const Profile = () => {
             alt=""
           />
         </Carousel>
+
+
       </div>
+
+
+
     </div>
   );
 };
